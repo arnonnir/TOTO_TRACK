@@ -99,7 +99,15 @@ app.run(function($ionicPlatform, $rootScope, $timeout, $state) {
     }
   })
 
-
+  .state('app.cameraShot', {
+    url: '/cameraShot',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/cameraShot.html',
+        controller : 'cameraShotCtrl'
+      }
+    }
+  })
 
 
 
@@ -128,17 +136,7 @@ app.run(function($ionicPlatform, $rootScope, $timeout, $state) {
       }
   })
 
-  .state('app.shop', {
-    url: '/shop',
-    data : { auth : true },
-    cache : false,
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/shop.html',
-        controller : 'ShopCtrl'
-      }
-    }
-  })
+
 
   .state('app.cart', {
     url: '/cart',

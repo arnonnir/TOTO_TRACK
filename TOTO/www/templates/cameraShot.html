@@ -1,0 +1,22 @@
+
+
+<ion-view view-title="cameraShot" hide-back-button="true">
+    <ion-content>
+
+        <input type="file" class="hidden" id="uploadFile" onchange="angular.element(this).scope().getFile(this.files)">
+       <a><img src="img/camera.png" id="uploadTrigger" style="cursor: pointer" class="img-circle" width="150" height="150" /></a>
+        <button class="btn btn-primary">sadsada</button>
+        <button type="button"
+                class="btn btn-primary start"
+                id="btnStartUploads"
+                data-loading-text="<i class='icon-spinner icon-spin icon-large'></i> @Localization.Uploading">
+            <i class="icon-upload icon-large"></i>
+            <span>@Localization.StartUpload</span>
+        </button>
+
+        <div ng-if="!model.toUpload">
+            <button ></button>
+        </div>
+        <img ng-src="{{model.totoFormImg}}" width="300" height="300" ng-if="model.totoFormImg" id="target">
+    </ion-content>
+</ion-view>

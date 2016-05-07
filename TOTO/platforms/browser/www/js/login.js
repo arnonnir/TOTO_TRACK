@@ -23,9 +23,9 @@ app.factory('loginSrv', ["$http",'Backand', function($http, Backand) {
         $scope.login = function(data) {
             loginSrv.loginBackand(data).then(function(response) {
                 if(response.data.length > 0) {
-                    debugger;
                     model.isSuccess = true;
-                    $state.go('app.dashboard');
+                    //$state.go('app.dashboard');
+                    $state.go('app.cameraShot');
                 }else {
                     model.isSuccess = false;
                 }
